@@ -24,8 +24,11 @@ __author__ = "???"
 
 def verbing(s):
     # your code here
-    return
-
+    if(s.endswith('ing')):
+        return s + 'ly'
+    elif (len(s) >= 3):
+        return s + 'ing' 
+    return s
 
 # E. not_bad
 # Given a string, find the first occurrence of the substrings
@@ -38,6 +41,8 @@ def verbing(s):
 
 def not_bad(s):
     # your code here
+    # if (find("not", 0, len(s))
+
     return
 
 
@@ -52,8 +57,23 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    front = ''
+    back = ''
+    bfront = ''
+    bback = ''
+    if(len(a) % 2 == 0):
+        front = a[:(len(a) // 2)]
+        back = a[-(len(a)//2):]
+    if(len(b) % 2 == 0):
+        bfront = b[:(len(b) // 2)]
+        bback = b[-(len(b)//2):]
+    if(len(a) % 2 == 1):
+        front = a[:(len(a) // 2) + 1]
+        back = a[-(len(a)//2):]
+    if(len(b) % 2 == 1):
+        bfront = b[:(len(b) // 2) + 1]
+        bback = b[-(len(b)//2):]
+    return front + bfront + back + bback
 
 
 # Provided simple test() function used in main() to print
