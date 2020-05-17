@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Peyton Glover and worked with Corbin Creech"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -42,7 +42,11 @@ def verbing(s):
 def not_bad(s):
     # your code here
     # if (find("not", 0, len(s))
-
+    if(s.endswith("!") and s.find('not') < s.find('bad')):
+        return s[:s.index('not')] + 'good!'
+    elif(s.find('not') < s.find('bad')):
+        return s[:s.index('not')] + 'good'
+    elif(s.find('not') or s.find('bad') == -1): return s
     return
 
 
